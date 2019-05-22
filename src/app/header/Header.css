@@ -1,0 +1,19 @@
+.header-flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0px;}
+
+li {
+    list-style-type: none;
+    padding: 0px;
+}
+
+.header-item {
+    flex-grow: 1;
+}
+
+.flex-logo {
+    flex-grow: 1;
+}
