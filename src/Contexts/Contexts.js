@@ -16,9 +16,17 @@ export class Provider extends Component {
         word_list: [
             { word: { word: 'WOOOOORD', definition: 'bcksbclebcvebdc'} },
             { word: { word: 'ANOOOTHER', definition: 'bvebvebnvkernvkrnnckenckd'}}
-        ]
+        ],
+        date: ""
     }
-
+    componentDidMount() {
+        var today = new Date(),
+        date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+            console.log(date)
+            this.setState = ({
+            date: date
+            });
+    }
 
     render() {
         return (

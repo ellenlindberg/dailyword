@@ -5,7 +5,7 @@ import Header from './header/Header';
 import Root from './routes/root/Root';
 import FavouriteWords from './routes/favouritewords/FavouriteWords';
 import Footer from './footer/Footer';
-import { Provider } from '../Contexts/Words';
+import { Provider } from '../Contexts/Contexts';
 
 function App() {
   return (
