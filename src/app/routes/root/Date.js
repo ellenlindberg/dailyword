@@ -1,10 +1,13 @@
 import React from 'react';
+import { Consumer } from '../../../Contexts/Contexts';
 
 function Date () {
     return (
-        <div className="date">
-            <p>2019-05-23</p>
-        </div>
+        <Consumer>
+            { value => {
+                return value.date
+            }}
+        </Consumer>
     )
 }
 

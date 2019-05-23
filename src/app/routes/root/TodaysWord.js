@@ -6,8 +6,7 @@ function TodaysWord () {
     return (
       <Consumer>
         {value => {
-          console.log(value)
-          return <h3>Hej</h3>
+          return <h3>{value.word_list[0].word.word}</h3>
         }}  
       </Consumer>
     )
