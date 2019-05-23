@@ -1,16 +1,20 @@
 import React from 'react';
-//import axios from 'axios';
+import { Consumer } from '../../../Contexts/Words';
+import axios from 'axios';
 
 function TodaysWord () {
-    /*
+    
   axios.get("https://wordsapiv1.p.mashape.com/words/?random=true", { headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
   .then(response => {
-    console.log(response.data)
-  })*/
+    console.log(response.data.word)
+  })
     return (
-        <div className="todaysword">
-            <p>Här ska vara ett ord</p>
-        </div>
+      <Consumer>
+        {value => {
+          console.log(value)
+          return <h3>Hej</h3>
+        }}  
+      </Consumer>
     )
 }
 

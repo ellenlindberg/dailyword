@@ -5,21 +5,24 @@ import Header from './header/Header';
 import Root from './routes/root/Root';
 import FavouriteWords from './routes/favouritewords/FavouriteWords';
 import Footer from './footer/Footer';
+import { Provider } from '../Contexts/Words';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
+    <Provider>
+      <div className="App">
+        <Header />
 
-        <div class="container">
-          <Switch>
-            <Route exact path="/" component={Root} />
-            <Route path="/favouritewords" component={FavouriteWords} />
-          </Switch>
-        </div>
-        
-      <Footer />
-    </div>
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Root} />
+              <Route path="/favouritewords" component={FavouriteWords} />
+            </Switch>
+          </div>
+
+        <Footer />
+      </div>
+    </Provider>
   );
 }
 
