@@ -1,14 +1,14 @@
 import React from 'react';
 //import '../App.css';
 import './Header.css';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 function Header() {
   return (
     <header className="header">
       <ul className="header-flex">
-        <li className="header-item flex-logo">WordOfTheDay</li>
-        <li className="header-item"> My favourite words</li>
+        <li className="header-item flex-logo"><Link to="/">WordOfTheDay</Link></li>
+        <li className="header-item"> <Link to="/favouritewords">My favourite words</Link></li>
       </ul>
     </header>
   )

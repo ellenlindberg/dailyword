@@ -1,18 +1,38 @@
 import React from 'react';
 import '../App.css';
-import axios from 'axios';
+import { Switch, Route } from 'react-router-dom';
+import Root from './routes/root/Root';
+import FavouriteWords from './routes/favouritewords/FavouriteWords';
 
-function Main() {
 
-  axios.get("https://wordsapiv1.p.mashape.com/words/?random=true", { headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
-  .then(response => {
-    console.log(response.data)
-  })
-  return (
-    <main>
-      <p>MAIN</p>
-    </main>
-  )
+class Main extends React.Component {
+  constructor() {
+    super();
+      this.getRoot = this.getRoot.bind(this);
+      this.getFavouriteWords = this.getFavouriteWords.bind(this);
+  }
+
+  getRoot() {
+    return (
+      <Root />
+    );
+  }
+
+  getFavouriteWords() {
+    return (
+      <FavouriteWords />
+    );
+  }
+  render() {
+
+    return (
+      <main>
+        <Switch>
+          <Route exact path="/" component={this.getRoot} />
+          <Route path="/favouritewords" component={this.getFavouriteWords} />
+        </Switch>
+      </main>
+    )
+  }
 }
-
 export default Main;
