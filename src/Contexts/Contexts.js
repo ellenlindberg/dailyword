@@ -23,7 +23,7 @@ export class Provider extends Component {
         var today = new Date(),
         date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
             console.log(date)
-            this.setState = ({
+            this.setState({
             date: date
             });
     }
