@@ -5,17 +5,30 @@ import axios from 'axios';
 const Context = React.createContext();
 
 
-    axios.get("https://wordsapiv1.p.mashape.com/words/?random=true", { headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
-    .then(response => {
-    console.log(response.data)
-  })
+    axios
+        .get(
+            "https://wordsapiv1.p.mashape.com/words/?random=true", { 
+                headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
+        .then(response => {
+        console.log(response.data)
+        })
 
 
 export class Provider extends Component {
     state = {
         word_list: [
-            { word: { word: 'WOOOOORD', definition: 'bcksbclebcvebdc'} },
-            { word: { word: 'ANOOOTHER', definition: 'bvebvebnvkernvkrnnckenckd'}}
+            { 
+                word: {
+                        word: 'WOOOOORD', 
+                        definition: 'bcksbclebcvebdc'
+                    } 
+                },
+            { 
+                word: {
+                    word: 'ANOOOTHER', 
+                    definition: 'bvebvebnvkernvkrnnckenckd'
+                }
+            }
         ],
         date: ""
     }
