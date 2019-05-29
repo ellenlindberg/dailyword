@@ -6,7 +6,7 @@ function WordDefinition () {
     return (
         <Consumer>
             { value => {
-                return value.word_list[0].word.definition
+                return value.newDefinition
             }}
         </Consumer>
     )

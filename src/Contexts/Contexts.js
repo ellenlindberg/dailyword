@@ -4,41 +4,41 @@ import axios from 'axios';
 
 const Context = React.createContext();
 
-
-    axios
-        .get(
-            "https://wordsapiv1.p.mashape.com/words/?random=true", { 
-                headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
-        .then(response => {
-        console.log(response.data)
-        })
-
-
 export class Provider extends Component {
     state = {
         word_list: [
             { 
-                word: {
-                        word: 'WOOOOORD', 
-                        definition: 'bcksbclebcvebdc'
-                    } 
-                },
-            { 
-                word: {
-                    word: 'ANOOOTHER', 
-                    definition: 'bvebvebnvkernvkrnnckenckd'
-                }
+                date: '',
+                word: '',
+                definition: ''
             }
         ],
-        date: ""
+        newDate: '',
+        newWord: '',
+        newDefinition: ''    
     }
-    componentDidMount() {
+
+    componentDidMount = async() => {
         var today = new Date(),
         date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
-            console.log(date)
-            this.setState({
-            date: date
-            });
+    
+        while (true) {
+            try {
+                const response = await axios.get(
+                    "https://wordsapiv1.p.mashape.com/words/?random=true", { 
+                        headers: { 'X-Mashape-Key' : 'e3d8c67bdemsha054c770d23e553p180462jsn50e02505eaeb'}})
+                console.log(response.data)
+                this.setState({
+                    newDate: date,
+                    newWord: response.data.word,
+                    newDefinition: response.data.results[0].definition
+                });
+
+                break;
+            } catch {
+
+            }
+        }
     }
 
     render() {
@@ -53,21 +53,3 @@ export class Provider extends Component {
 }
 
 export const Consumer = Context.Consumer;
-
-
-
-
-
-
-
-
-
-/*
-import React, { useState, createContext } from 'react';
-
-const WordsContext = createContext();
-
-const WordsProvider = ({ children }) => {
-    const [word , setWord] = useState(null);
-    const [results, setResults] = useState(null);
-}*/

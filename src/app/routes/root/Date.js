@@ -5,7 +5,7 @@ function Date () {
     return (
         <Consumer>
             { value => {
-                return value.date
+                return value.newDate
             }}
         </Consumer>
     )
