@@ -1,14 +1,12 @@
 import React from 'react';
-import { Consumer } from '../../../Contexts/Contexts'
 
 
-function WordDefinition () {
+function WordDefinition (props) {
+    const { definition } = props
     return (
-        <Consumer>
-            { value => {
-                return value.newDefinition
-            }}
-        </Consumer>
+        <div>
+            {definition}
+        </div>
     )
 }
 

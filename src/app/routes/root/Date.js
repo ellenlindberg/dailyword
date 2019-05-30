@@ -1,13 +1,12 @@
 import React from 'react';
-import { Consumer } from '../../../Contexts/Contexts';
 
-function Date () {
-    return (
-        <Consumer>
-            { value => {
-                return value.newDate
-            }}
-        </Consumer>
+function Date (props) {
+    console.log()
+    const {date} = props;
+    return ( 
+        <div>
+            {date}
+        </div>
     )
 }
 
