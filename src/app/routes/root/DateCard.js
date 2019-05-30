@@ -3,6 +3,7 @@ import './DateCard.css';
 import Date from './Date';
 import TodaysWord from './TodaysWord';
 import WordDefinition from './WordDefinition';
+import LikeButton from './LikeButton';
 
 
 function DateCard (props) {
@@ -12,8 +13,9 @@ function DateCard (props) {
     return (
             
         <div className="datecard">
-        
-
+            <LikeButton date={date}
+                word={word}
+                definition={definition} />
             <Date date={date}/>
             <TodaysWord word={word}/>
             <WordDefinition definition={definition}/>

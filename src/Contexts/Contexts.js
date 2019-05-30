@@ -8,6 +8,7 @@ const Context = React.createContext();
 export class Provider extends Component {
     state = {
         word_list: [],
+        favorites: [],
         newDate: '',
         newWord: '',
         newDefinition: ''    
@@ -67,9 +68,9 @@ export class Provider extends Component {
         }
         this.setState({
             word_list: JSON.parse(localStorage.getItem('words')),
+            favorites: JSON.parse(localStorage.getItem('favorites')) || []
         });
     }   
-
     
     /* Returns list of words from localStorage */
     getWords = () => {
@@ -82,10 +83,42 @@ export class Provider extends Component {
         }
     }
 
+    likeButtonHandler = (date, word, definition) => {
+        this.setState({
+            favorites: [
+                ...this.state.favorites,
+                {
+                    date: date,
+                    word: word,
+                    definition: definition
+                }
+            ],
+        }, () => {
+            localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
+        });
+    }
+
+    /* Returns list of favorites from localStorage */
+    getFavorites = () => {
+        let favorites = localStorage.getItem("favorites");
+        if(favorites == null) {
+            localStorage.setItem("favorites", JSON.stringify([]));
+            return [];
+        } else {
+            return JSON.parse(favorites);
+        }
+    }
+
+    
+
     render() {
+        console.log(this.state)
         return (
             <div>
-                <Context.Provider value={this.state}>
+                <Context.Provider value={{
+                    ...this.state,
+                    likeButtonHandler: this.likeButtonHandler
+                }}>
                     {this.props.children}
                 </Context.Provider>
             </div>
