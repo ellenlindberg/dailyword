@@ -84,9 +84,16 @@ export class Provider extends Component {
     }
 
     likeButtonHandler = (date, word, definition) => {
+        const { favorites } = this.state;
+        for (let i = 0; i < favorites.length; i++) {
+            const favorite = favorites[i];
+            if (favorite.date === date) {
+                return;
+            }
+        }
         this.setState({
             favorites: [
-                ...this.state.favorites,
+                ...favorites,
                 {
                     date: date,
                     word: word,
@@ -97,19 +104,6 @@ export class Provider extends Component {
             localStorage.setItem("favorites", JSON.stringify(this.state.favorites));
         });
     }
-
-    /* Returns list of favorites from localStorage */
-    getFavorites = () => {
-        let favorites = localStorage.getItem("favorites");
-        if(favorites == null) {
-            localStorage.setItem("favorites", JSON.stringify([]));
-            return [];
-        } else {
-            return JSON.parse(favorites);
-        }
-    }
-
-    
 
     render() {
         console.log(this.state)
