@@ -1,21 +1,32 @@
 import React from 'react';
 import DateCard from './DateCard';
-import { Consumer } from '../../../Contexts/Contexts'
+import { Consumer } from '../../../Contexts/Contexts';
+import Slider from "react-slick";
+
 
  function Root () {
+     const settings = {
+        className: "center",
+        infinite: false,
+        centerPadding: "60px",
+        slidesToShow: 1,
+        speed: 500
+     }
     return (
-        <Consumer>
-            { value => {
-                console.log(value.word_list)
-                return value.word_list.map((dateCard, i) => {
-                    console.log(dateCard)
-                    return <li key={ i }><DateCard dateObject={dateCard}/></li>
-                }).reverse();
+        <div className="root-container">
+                <Consumer>
+                    { value => {
+                        return <Slider {...settings}>
 
-          
-            }}
-      
-        </Consumer>
+                        { value.word_list.map((dateCard, i) => {
+                            console.log(dateCard)
+                            return <li key={ i }><DateCard dateObject={dateCard}/></li>
+                        }).reverse()}
+                        </Slider>
+
+                    }}
+                </Consumer>
+        </div>
     )
 }
 

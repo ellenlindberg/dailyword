@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 function WordDefinition (props) {
     const { definition } = props
     return (
@@ -9,6 +8,5 @@ function WordDefinition (props) {
         </div>
     )
 }
-
 
 export default WordDefinition;

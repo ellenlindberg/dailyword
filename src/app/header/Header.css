@@ -1,5 +1,6 @@
 .header-flex {
     display: flex;
+    min-height: 10vh;
     width: 100%;
     justify-content: space-between;
     flex-wrap: wrap;

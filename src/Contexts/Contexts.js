@@ -20,7 +20,7 @@ export class Provider extends Component {
         let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
         /* Get list of words from localStorage */
-        console.log('todays date', date);
+       // console.log('todays date', date);
         let checkDate = this.getWords();
  
         /* Check if the date is todays date, then break */
@@ -32,7 +32,7 @@ export class Provider extends Component {
                 break;
             }
         }
-        console.log('todaysWordDefined', todaysWordDefined);
+      //  console.log('todaysWordDefined', todaysWordDefined);
 
         /* If todays date do not exist in list, run request to API and set states for date, word and definition */
         if (!todaysWordDefined) {
@@ -106,7 +106,6 @@ export class Provider extends Component {
     }
 
     render() {
-        console.log(this.state)
         return (
             <div>
                 <Context.Provider value={{
