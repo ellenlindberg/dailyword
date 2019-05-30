@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
+/* Context API, to get data through components */
 
 const Context = React.createContext();
 
@@ -12,14 +13,16 @@ export class Provider extends Component {
         newDefinition: ''    
     }
 
+    /* Get todays date, checks if todays date exist in list and run req to get a word if the day does not */
     componentDidMount = async() => {
         let today = new Date()
         let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
+        /* Get list of words from localStorage */
         console.log('todays date', date);
         let checkDate = this.getWords();
  
-
+        /* Check if the date is todays date, then break */
         let todaysWordDefined;
         for (let i = 0; i < checkDate.length; i++) {
             const someDate = checkDate[i];
@@ -29,6 +32,8 @@ export class Provider extends Component {
             }
         }
         console.log('todaysWordDefined', todaysWordDefined);
+
+        /* If todays date do not exist in list, run request to API and set states for date, word and definition */
         if (!todaysWordDefined) {
             while (true) {
                 try {
@@ -42,6 +47,7 @@ export class Provider extends Component {
                     });
                     let words = this.getWords();
                     
+                    /* Saves to localStorage */
                     words.push({
                         date: this.state.newDate,
                         word: this.state.newWord,
@@ -51,6 +57,7 @@ export class Provider extends Component {
                     break;
                 } catch {}
             }
+        /* If todays date do exist in list, set states */
         } else {
             this.setState({
                 newDate: todaysWordDefined.date,
@@ -64,7 +71,7 @@ export class Provider extends Component {
     }   
 
     
-
+    /* Returns list of words from localStorage */
     getWords = () => {
         let words = localStorage.getItem("words");
         if(words == null) {
