@@ -15,6 +15,11 @@ code {
     monospace;
 }
 
+@font-face {
+  font-family: myFirstFont;
+  src: url('./solari.ttf')
+}
+
 .container {
   min-height: 60vh;
 }
