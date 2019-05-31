@@ -83,6 +83,8 @@ export class Provider extends Component {
         }
     }
 
+   
+
     likeButtonHandler = (date, word, definition) => {
         const { favorites } = this.state;
         for (let i = 0; i < favorites.length; i++) {
