@@ -1,11 +1,11 @@
 import React from 'react';
-import '../App.css';
+import './Footer.css';
 
 
 function Footer() {
   return (
     <footer className="footer">
-      <p><a href="https://github.com/ellenlindberg/dailyword.git">https://github.com/ellenlindberg/dailyword.git</a></p>
+      <p><a href="https://github.com/ellenlindberg/dailyword.git">DAILYWORD ON GITHUB</a></p>
     </footer>
   )
 }

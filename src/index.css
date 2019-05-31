@@ -30,8 +30,8 @@ code {
   position:absolute;
   left:-10%;
   top:50%;
-  -ms-transform: translateY(-50%); /* IE 9 */
-  -webkit-transform: translateY(-50%); /* Safari */
+  /*-ms-transform: translateY(-50%); /* IE 9 */
+  /*-webkit-transform: translateY(-50%); /* Safari */
   }
 
 .slick-next{
@@ -40,8 +40,8 @@ code {
   position:absolute;
   right:-10%;
   top:50%;
-  -ms-transform: translateY(-50%); /* IE 9 */
-  -webkit-transform: translateY(-50%); /* Safari */
+  /*-ms-transform: translateY(-50%); /* IE 9 */
+  /*-webkit-transform: translateY(-50%); /* Safari */
   transform: translateY(-50%);
   }
 
