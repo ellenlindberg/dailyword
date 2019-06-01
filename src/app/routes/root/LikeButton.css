@@ -3,3 +3,16 @@
     color: white;
 }
 
+.yellow {
+    float: right;
+    margin: 2%;
+    font-size: 30px;
+    color: orange;    
+  }
+
+  .grey {
+    float: right;
+    margin: 2%;
+    font-size: 30px;
+    color: grey;
+  }
