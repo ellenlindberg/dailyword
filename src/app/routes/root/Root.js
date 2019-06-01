@@ -23,7 +23,7 @@ import Slider from "react-slick";
                         { value.word_list.map((dateCard, i) => {
                             console.log(dateCard)
                             return <li key={ i }><DateCard dateObject={dateCard}/></li>
-                        })}
+                        }).reverse()}
                         </Slider>
 
                     }}
