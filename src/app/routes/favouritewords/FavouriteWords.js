@@ -6,16 +6,19 @@ import './FavouriteWords.css'
 
 function FavouriteWords() {
     return (
-        <div className="flexbox">
-            <Consumer>
-                { value => {
-                    return <div className="flexbox-item"> {value.favorites.map((dateCard, i) => {
-                        return <li key={ i }><DateCard dateObject={dateCard}/></li>
-                    }).reverse()}
-                    </div>
-                }
-                }
-            </Consumer>
+        <div>
+            <h2 id="my-favs">My Favs</h2>
+            <div className="flexbox">
+                <Consumer>
+                    { value => {
+                        return <div className="flexbox-item"> {value.favorites.map((dateCard, i) => {
+                            return <li key={ i }><DateCard dateObject={dateCard}/></li>
+                        }).reverse()}
+                        </div>
+                    }
+                    }
+                </Consumer>
+            </div>
         </div>
     )
 }
