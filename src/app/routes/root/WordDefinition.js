@@ -1,9 +1,10 @@
 import React from 'react';
+import './WordDefinition.css';
 
 function WordDefinition (props) {
     const { definition } = props
     return (
-        <div>
+        <div className="word-definition">
             {definition}
         </div>
     )

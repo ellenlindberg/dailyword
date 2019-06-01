@@ -1,5 +1,5 @@
 import React from 'react';
-//import './DateCard.css';
+import './DateCard.css';
 import Date from './Date';
 import TodaysWord from './TodaysWord';
 import WordDefinition from './WordDefinition';

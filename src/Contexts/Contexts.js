@@ -17,8 +17,13 @@ export class Provider extends Component {
     /* Get todays date, checks if todays date exist in list and run req to get a word if the day does not */
     componentDidMount = async() => {
         let today = new Date()
-        let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        console.log(today.getMonth() +1)
 
+        if (today.getMonth() +1 < 10 || today.getDate() < 10) {
+            var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
+        } else {
+            var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+        }
         /* Get list of words from localStorage */
        // console.log('todays date', date);
         let checkDate = this.getWords();
