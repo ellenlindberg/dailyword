@@ -20,5 +20,21 @@
     border: 1px solid #000;
     border-radius: 10px;
     height: 200px;
+    margin: 20px;
+}
+.flexbox-item i {
+    display: none;
 }
 
+/* MOBILE */
+@media screen and (max-width:480px) {
+
+}
+/* TABLET */
+@media screen and (max-width:600px) {
+
+}
+/* DESKTOP */
+@media screen and (max-width:768px) {
+
+}

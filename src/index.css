@@ -60,6 +60,8 @@ code {
   height: 300px;
   text-align: center;
   margin: 0 2px;
+  border: 1px solid #000;
+  border-radius: 10px;
 }
 
 
