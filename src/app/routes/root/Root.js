@@ -12,7 +12,7 @@ import Slider from "react-slick";
         slidesToShow: 1,
         speed: 500,
         rtl: true,
-        dots: true
+        dots: true,
      }
     return (
         <div className="root-container">
