@@ -3,7 +3,7 @@
     justify-content: center;
 }
 .flexbox-item {
-    width: 100%;
+    width: 70%;
 }
 .flexbox-item button {
     display: none;
@@ -16,18 +16,21 @@
 .flexbox-item h3 {
     font-size: 26px;
 }
+.flexbox-item h4 {
+    display: none;
+}
 .flexbox-item .datecard-item {
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     border-radius: 10px;
-    height: 200px;
+    height: 250px;
     margin: 20px;
 }
 .flexbox-item i {
     display: none;
 }
 #my-favs {
-    font-family: 'Sigmar One', cursive;    
+    font-family: 'Cinzel', serif;
     font-size: 50px;
     margin-top: 15px;
 }
@@ -39,12 +42,12 @@
 /* TABLET */
 @media screen and (min-width: 480px) and (max-width:1024px) {
     .flexbox-item {
-        width: 80%;
+        width: 70%;
     }
 }
 /* DESKTOP */
 @media screen and (min-width:1024px) {
     .flexbox-item {
-        width: 60%;
+        width: 40%;
     }
 }
