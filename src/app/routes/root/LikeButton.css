@@ -1,13 +1,17 @@
-
+.like-icon {
+    background-color: white;
+}
 
 .yellow {
     margin: 2%;
     font-size: 30px;
-    color: orange;    
+    color: orange;
+    padding-bottom: 10px;    
   }
 
   .grey {
     margin: 2%;
     font-size: 30px;
     color: grey;
+    padding-bottom: 10px;
   }

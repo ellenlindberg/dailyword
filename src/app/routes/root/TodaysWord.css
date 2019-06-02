@@ -1,11 +1,14 @@
+@import url('https://fonts.googleapis.com/css?family=Cinzel&display=swap');
+
 .todays-word {
     background-color: white;
     height: 50%;
-    width: 85%;
     margin: 0px auto;
   }
 
 h4 {
+    font-family: 'Cinzel', serif;
+    font-size: 30px;
     margin: 0px;
     padding-top: 20px;
 }

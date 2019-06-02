@@ -11,11 +11,7 @@ function DateCard (props) {
 
     return (
         <div className="datecard-item">
-            <LikeButton 
-                date={date}
-                word={word}
-                definition={definition} 
-            />
+       
             <Date 
                 date={date}
             />
@@ -24,6 +20,11 @@ function DateCard (props) {
             />
             <WordDefinition
                 definition={definition}
+            />
+                 <LikeButton 
+                date={date}
+                word={word}
+                definition={definition} 
             />
         </div>
     )

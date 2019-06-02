@@ -6,7 +6,7 @@ function Header() {
   return (
     <header className="header">
       <ul className="header-flex">
-        <li className="header-item flex-logo"><Link to="/">Word Of The Day</Link></li>
+        <li className="header-item flex-logo"><Link to="/">DailyWord</Link></li>
         <li className="header-item"> <Link to="/favouritewords">My Favourite Words</Link></li>
       </ul>
     </header>

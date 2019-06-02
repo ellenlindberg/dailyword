@@ -10,6 +10,7 @@ function LikeButton ( props) {
     const { date, word, definition } = props;
    
     return (
+        <div className="like-icon">
         <Consumer>
             { value => {
                 const { likeButtonHandler } = value;
@@ -25,6 +26,7 @@ function LikeButton ( props) {
                 )} 
             }
         </Consumer>
+        </div>
     )
 }
 

@@ -1,5 +1,5 @@
 .footer {
-    min-height: 10vh;
+    min-height: 5vh;
 }
 a:link {
     text-decoration: none;
@@ -14,7 +14,6 @@ a:visited {
 a:hover {
     text-decoration: none;
     color: #fff;
-    font-size: 120%;
 }
 
 a:active {

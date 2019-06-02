@@ -1,3 +1,11 @@
+@font-face {
+    font-family: headerFont;
+    src: url('../../AustieBostBlueberryMuffins.ttf')
+}
+
+a:hover {
+    border-bottom: 3px solid white;
+}
 .header-flex {
     display: flex;
     min-height: 10vh;
@@ -13,8 +21,12 @@ li {
 
 .header-item {
     flex-grow: 1;
+    font-size: 20px;
 }
 
 .flex-logo {
+    font-size: 40px;
+    padding-right: 40%;
+    font-family: headerFont;
     flex-grow: 1;
 }
