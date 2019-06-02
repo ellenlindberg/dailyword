@@ -30,3 +30,14 @@ li {
     font-family: headerFont;
     flex-grow: 1;
 }
+
+@media screen and (max-width:480px) {
+    .header-flex {
+        flex-direction: column;
+    }
+
+    .flex-logo {
+        padding-right: 0px;
+    }
+   
+}

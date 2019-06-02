@@ -1,0 +1,58 @@
+
+.container {
+    min-height: 60vh;
+  }
+  
+  .slick-prev{
+    width:50px;
+    height:50px;
+    position:absolute;
+    left:-10%;
+    top:50%;
+  }
+  
+  .slick-next{
+    width:50px;
+    height:50px;
+    position:absolute;
+    right:-10%;
+    top:50%;
+    transform: translateY(-50%);
+  }
+  
+  .root-container {
+    margin: 5% auto;
+    width: 38%;
+  }
+  
+  
+  .slick-slider {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+  
+
+  
+  /* MOBILE */
+  @media screen and (max-width:480px) {
+    .container {
+      min-height: 10vh;
+    }
+  
+     .root-container {
+       width: 80%;
+     }
+  
+     .slick-next {
+       right: -14%;
+     }
+  
+     .slick-prev {
+      left: -14%;
+     }
+  }
+  /* TABLET */
+  @media screen and (min-width: 480px) and (max-width:1024px) {
+    .root-container {
+      width: 60%;
+    }
+  }

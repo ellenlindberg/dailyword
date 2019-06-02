@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 
-/* Context API, to get data through components */
 
+/* Context API, to get data through components */
 const Context = React.createContext();
 
 export class Provider extends Component {
@@ -17,7 +17,6 @@ export class Provider extends Component {
     /* Get todays date, checks if todays date exist in list and run req to get a word if the day does not */
     componentDidMount = async() => {
         let today = new Date()
-        console.log(today.getMonth() +1)
 
         if (today.getMonth() +1 < 10 || today.getDate() < 10) {
             var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
@@ -25,7 +24,6 @@ export class Provider extends Component {
             var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         }
         /* Get list of words from localStorage */
-       // console.log('todays date', date);
         let checkDate = this.getWords();
  
         /* Check if the date is todays date, then break */
@@ -37,7 +35,6 @@ export class Provider extends Component {
                 break;
             }
         }
-      //  console.log('todaysWordDefined', todaysWordDefined);
 
         /* If todays date do not exist in list, run request to API and set states for date, word and definition */
         if (!todaysWordDefined) {
@@ -87,7 +84,6 @@ export class Provider extends Component {
             return JSON.parse(words);
         }
     }
-
    
 
     likeButtonHandler = (date, word, definition) => {

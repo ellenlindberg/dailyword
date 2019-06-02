@@ -1,6 +1,7 @@
 import React from 'react';
-import DateCard from './DateCard';
 import { Consumer } from '../../../Contexts/Contexts';
+import './Root.css';
+import DateCard from './DateCard';
 import Slider from "react-slick";
 
 
