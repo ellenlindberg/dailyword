@@ -21,6 +21,7 @@ export class Provider extends Component {
         if (today.getMonth() +1 < 10 || today.getDate() < 10) {
             var date = today.getFullYear() + '-0' + (today.getMonth() + 1) + '-0' + today.getDate();
         } else {
+            // eslint-disable-next-line
             var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
         }
         /* Get list of words from localStorage */
